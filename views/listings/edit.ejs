@@ -1,0 +1,90 @@
+<%- layout("/layouts/boilerplate") %>
+<div class="row">
+  <div class="col-8 offset-2">
+    <h3 class="my-3">Edit listing: <u><%= listing.title %></u></h3>
+    <form
+      action="/listings/<%= listing._id %>?_method=PUT"
+      method="post"
+      class="needs-validation"
+      enctype="multipart/form-data"
+      novalidate
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Product title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          id="title"
+          value="<%= listing.title %>"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          type="text"
+          name="listing[description]"
+          rows="10"
+          cols="50"
+          id="description"
+          class="form-control"
+          required
+        >
+            <%= listing.description %></textarea
+        >
+        <div class="invalid-feedback">Description shouldn't be empty!</div>
+      </div>
+
+      <div class="mb-3">
+        <img src="<%= originalImage %>" alt="">
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Update image</label>
+        <input type="file" name="listing[image]" id="image" class="form-control">
+      </div>
+      <div class="row">
+        <div class="mb-3 col-5">
+          <label for="price" class="form-label">Property price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            value="<%= listing.price %>"
+            class="form-control"
+            id="price"
+            required
+          />
+          <div class="invalid-feedback">Add price to the property</div>
+        </div>
+        <div class="mb-3 col-7">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            name="listing[location]"
+            value="<%= listing.location %>"
+            id="location"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Specify location of the property</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input
+          type="text"
+          name="listing[country]"
+          value="<%= listing.country %>"
+          id="country"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Country must be specified</div>
+      </div>
+      <button type="submit" class="btn btn-dark edit-btn mb-3 px-4">
+        Edit
+      </button>
+    </form>
+  </div>
+</div>
