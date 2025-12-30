@@ -13,7 +13,7 @@ A full-stack Airbnb-style vacation rental listing platform built with Node.js, E
 - [Environment Variables](#-environment-variables)
 - [Running the Application](#-running-the-application)
 - [API Routes](#-api-routes)
-- [Models & Database Schema](#-models-database-schema)
+- [Models & Database Schema](#-models--database-schema)
 - [Middleware & Authentication](#-middleware--authentication)
 - [Deployment](#-deployment)
 - [Contributing](#-contributing)
