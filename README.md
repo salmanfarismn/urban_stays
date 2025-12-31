@@ -355,24 +355,6 @@ router.put(
 3. Set environment variables in Render dashboard
 4. Deploy
 
-#### Heroku
-
-```bash
-# Install Heroku CLI
-heroku login
-heroku create your-app-name
-heroku config:set ATLAS_URL=<your_uri> SECRET=<secret> ...
-git push heroku main
-```
-
-#### AWS / DigitalOcean / Other
-
-- Ensure Node.js, npm, and environment variables are configured
-- Use a process manager like `pm2` for production
-- Serve static files via CDN or reverse proxy (nginx)
-
----
-
 ## 📝 Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -385,15 +367,9 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📄 License
-
-This project is licensed under the ISC License. See the LICENSE file for details.
-
----
-
 ## 📧 Support
 
-For issues, questions, or suggestions, please open a [GitHub Issue](https://github.com/yourusername/UrbanStays/issues).
+For issues, questions, or suggestions, please open a [GitHub Issue](https://github.com/salmanfarismn/UrbanStays/issues).
 
 ---
 
